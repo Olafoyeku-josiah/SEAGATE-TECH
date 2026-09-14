@@ -19,11 +19,11 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Features", href: "#features" },
-    { label: "Portfolio", href: "#gallery" },
-    { label: "Estimator", href: "#quote" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#services" },
+    { label: "Features", href: "/#features" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Estimator", href: "/#quote" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -61,13 +61,13 @@ export function Navbar() {
           {/* Nav Links */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="px-3 py-1.5 text-xs text-zinc-400 hover:text-white rounded-md hover:bg-white/[0.05] transition-colors font-medium"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -115,14 +115,14 @@ export function Navbar() {
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="px-3 py-2 text-sm text-zinc-300 hover:text-white rounded-md hover:bg-white/[0.05]"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="pt-3 border-t border-white/[0.08] flex flex-col gap-2">
                 <a

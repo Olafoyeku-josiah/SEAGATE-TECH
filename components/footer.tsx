@@ -51,13 +51,13 @@ export function Footer() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs text-zinc-400">
               {servicesList.map((service, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#services"
+                  href="/#services"
                   className="hover:text-white transition-colors"
                 >
                   {service}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -94,21 +94,21 @@ export function Footer() {
             © {currentYear} SeaGate Tech. Collingdale, PA.
           </div>
           <div className="flex items-center gap-4 text-zinc-400">
-            <a href="#services" className="hover:text-white transition-colors">
+            <Link href="/#services" className="hover:text-white transition-colors">
               Services
-            </a>
-            <a href="#features" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/#features" className="hover:text-white transition-colors">
               Features
-            </a>
-            <a href="#gallery" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/portfolio" className="hover:text-white transition-colors">
               Portfolio
-            </a>
-            <a href="#quote" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/#quote" className="hover:text-white transition-colors">
               Estimator
-            </a>
-            <a href="#contact" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/#contact" className="hover:text-white transition-colors">
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </div>
